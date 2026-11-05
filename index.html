@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="bn">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>আমার সংগ্রহ</title>
+<meta name="description" content="লিংক, ভিডিও, ছবি ও পিডিএফের সংগ্রহ। যে কেউ যোগ করতে পারে।">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600&family=Tiro+Bangla&display=swap">
+<link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+<header class="top">
+  <div class="top-in">
+    <div class="brand-row">
+      <div class="brand">আমার সংগ্রহ<small>লিংক, ভিডিও, ছবি ও পিডিএফ এক জায়গায়</small></div>
+      <div class="head-actions">
+        <button type="button" class="btn ghost sm" id="admin-btn">অ্যাডমিন</button>
+        <button type="button" class="icon-btn" id="theme-btn" aria-label="থিম বদলান"></button>
+      </div>
+    </div>
+    <nav class="tabs" id="tabs" aria-label="বিভাগ"></nav>
+  </div>
+</header>
+
+<main id="app">
+  <form class="panel login" id="login-panel" hidden>
+    <h3>অ্যাডমিন লগইন</h3>
+    <div class="field">
+      <label for="admin-pw">পাসওয়ার্ড</label>
+      <input type="password" id="admin-pw" autocomplete="current-password" maxlength="200">
+    </div>
+    <div class="actions">
+      <button type="submit" class="btn" id="login-go">লগইন</button>
+      <button type="button" class="btn ghost" id="login-cancel">বাতিল</button>
+      <p class="msg" id="login-msg" data-tone="info"></p>
+    </div>
+  </form>
+  <div class="banner" id="banner" hidden></div>
+</main>
+
+<div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="ছবি দেখুন" hidden>
+  <div class="stage"><img id="lb-img" alt=""></div>
+  <div class="bar">
+    <div class="cap" id="lb-cap"></div>
+    <div class="actions">
+      <button type="button" class="btn ghost sm" id="lb-prev">আগেরটি</button>
+      <button type="button" class="btn ghost sm" id="lb-next">পরেরটি</button>
+      <button type="button" class="btn ghost sm" id="lb-close">বন্ধ করুন</button>
+    </div>
+  </div>
+</div>
+<div class="toast" id="toast" role="status" hidden></div>
+<script src="/app.js"></script>
+</body>
+</html>

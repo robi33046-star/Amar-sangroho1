@@ -1,0 +1,9 @@
+{
+  "name": "amar-sangroho",
+  "version": "1.0.0",
+  "private": true,
+  "description": "লিংক, ভিডিও, ছবি ও পিডিএফের সংগ্রহ: সবাই আপলোড করতে পারে, মোছে শুধু অ্যাডমিন",
+  "main": "server.js",
+  "scripts": { "start": "node server.js" },
+  "engines": { "node": ">=18" }
+}
