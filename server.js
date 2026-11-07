@@ -310,17 +310,8 @@ async function initDb() {
         }, {}),
         used: used,
         total: MAX_TOTAL
-    
-
-    
-
-          
-          
-          
-          
-          
-         const headers = req.headers
-      Content-Type': 'application/json', 'X-Content-Type-Options': 'nosniff' };
+      };
+      headers = { 'Content-Type': 'application/json', 'X-Content-Type-Options': 'nosniff' };
       const body = JSON.stringify(ret);
       res.writeHead(200, Object.assign(headers, { 'Content-Length': Buffer.byteLength(body) }));
       return res.end(body);
@@ -328,7 +319,7 @@ async function initDb() {
 
     if (method === 'GET' && p === '/api/items') {
       const out = items.map(publicItem);
-      headers = { 'Content-Type': 'application/json', 'X-Content-Type-Options': 'nosniff' };
+     let headers headers = { 'Content-Type': 'application/json', 'X-Content-Type-Options': 'nosniff' };
       const body = JSON.stringify(out);
       res.writeHead(200, Object.assign(headers, { 'Content-Length': Buffer.byteLength(body) }));
       return res.end(body);
