@@ -319,7 +319,7 @@ async function initDb() {
 
     if (method === 'GET' && p === '/api/items') {
       const out = items.map(publicItem);
-     let headers headers = { 'Content-Type': 'application/json', 'X-Content-Type-Options': 'nosniff' };
+     let headers = { 'Content-Type': 'application/json', 'X-Content-Type-Options': 'nosniff' };
       const body = JSON.stringify(out);
       res.writeHead(200, Object.assign(headers, { 'Content-Length': Buffer.byteLength(body) }));
       return res.end(body);
